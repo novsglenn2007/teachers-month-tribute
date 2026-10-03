@@ -1,0 +1,230 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Teacher's Month!</title>
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --primary-hover: #4338ca;
+      --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      --card-bg: #ffffff;
+      --text: #1f2937;
+      --text-muted: #4b5563;
+      --accent: #f59e0b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: var(--bg-gradient);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        grid-template-columns: 1fr 1fr;
+      }
+      .full-width {
+        grid-column: span 2;
+      }
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Picture Section */
+    .image-container {
+      width: 100%;
+      height: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Message Section */
+    .message-content {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      white-space: pre-line;
+    }
+
+    /* Song Section */
+    .audio-player {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: #f3f4f6;
+      padding: 16px;
+      border-radius: 12px;
+    }
+
+    .song-details {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .song-icon {
+      font-size: 2rem;
+      background: #e0e7ff;
+      color: var(--primary);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .song-info h3 {
+      font-size: 1.1rem;
+      margin-bottom: 2px;
+    }
+
+    .song-info p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 8px;
+    }
+
+    footer {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎓 Happy Teacher's Month! ✏️</h1>
+    <p>A small token of appreciation for your dedication, patience, and guidance maam Beverly.</p>
+  </header>
+
+  <div class="container">
+    
+    <!-- PICTURE SECTION -->
+    <div class="card">
+      <h2>📸 Photo Tribute</h2>
+      <div class="image-container">
+        <!-- Replace the src below with your teacher's photo URL or path -->
+        <img src="/received_1187988652758362.jpeg" alt="Teacher Tribute">
+      </div>
+    </div>
+
+    <!-- SONG SECTION -->
+    <div class="card">
+      <h2>🎵 A Song For You</h2>
+      <p style="margin-bottom: 15px; color: var(--text-muted);">Press play to listen to this tribute song:</p>
+      <div class="audio-player">
+        <div class="song-details">
+          <div class="song-icon">🎧</div>
+          <div class="song-info">
+            <h3 id="song-title">Salamat sayo aming guro.</h3>
+            <p id="song-artist">Dedicated to our favorite Teacher</p>
+          </div>
+        </div>
+        <!-- Replace the src with your teacher's favorite song or mp3 file -->
+        <audio controls>
+          <source src="/snaptik_7384071833219239173_v3.mp4" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+
+    <!-- MESSAGE SECTION -->
+    <div class="card full-width">
+      <h2>✉️ Dear Teacher Beverly,</h2>
+      <div class="message-content">
+Thank you for being the light that guides us through our educational journey. 
+
+Your dedication, endless patience, and enthusiasm inspire us to be better every single day. You don't just teach lessons from textbooks—you teach us valuable lessons about life, kindness, and perseverance.
+
+Thank you for always believing in us, even when we struggled to believe in ourselves. Happy Teacher's Month!
+
+With sincere gratitude, 
+
+🩷 Your Students 🩷
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>Made with 🫶❤️ for Teacher's Month</p>
+  </footer>
+
+</body>
+</html>
